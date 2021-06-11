@@ -39,5 +39,5 @@ module test;
         #2 CET = 0;
 
 	end
-      
+       
 endmodule
