@@ -1,9 +1,9 @@
 //P189_4位集成数值比较器_74HC85
-module comparator_4b(
-	input Igt, Ilt, Ieq,		//扩展输入端，低级的输出做为输入
-	input [3:0] A, B,			//输入两个4位需要比较的数值，前者与后者关系
-	output reg Fgt, Flt, Feq	//上一级的结果联合A与B比较结果
-);		
+module comparator_4b(A, B, Feq, Fgt, Flt, Ieq, Igt, Ilt);
+
+	input [3:0] A, B;		//输入两个4位需要比较的数值，前者与后者关系
+	output reg Feq, Fgt, Flt;	//上一级的结果联合A与B比较结果
+	input Ieq, Igt, Ilt;		//扩展输入端，低级的输出做为输入	
 
 	always@(*) 
 	begin
